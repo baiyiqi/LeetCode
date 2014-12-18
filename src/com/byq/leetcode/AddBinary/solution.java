@@ -15,6 +15,9 @@ public class solution {
 
 
     }
+
+    public static void Test() {}
+
     public static String addBinary(String a, String b) {
 
         String[] fomer = a.length() > b.length()? a.split("") : b.split("") ;
