@@ -11,76 +11,42 @@ public class solution {
 
         System.out.println(addBinary("11","1"));
 
-
-
-
     }
 
-    public static void Test() {}
 
     public static String addBinary(String a, String b) {
 
-        String[] fomer = a.length() > b.length()? a.split("") : b.split("") ;
-        String[] add = a.length() <= b.length()? a.split("")  : b.split("") ;
-        String[] dig = new String[fomer.length+1];
-        String[] add1 = new String[fomer.length];
+        int length = a.length() > b.length()?a.length():b.length();
+
+        int lengthA = a.length();
+        int lengthB = b.length();
+
+        String result = "";
+
+        int c = 0;
+        int sum = 0;
+
+        for (int i = 1; i <= length; i++) {
+            int charA = 0;
+            int charB = 0;
 
 
-        int j = add.length-1;
-        for(int i = fomer.length-1; i>0; i--){
-            if(j >= 0)
-                add1[i] = add[j];
-            else
-                add1[i] = "0";
-            j --;
+            if (a.length() >= i)
+                charA = a.charAt(lengthA - i)%48;
+            if (b.length() >= i)
+                charB = b.charAt(lengthB - i)%48;
+
+            sum = charA + charB + c;
+
+            c = sum/2;
+            sum = sum%2;
+
+            result = sum + result;
         }
+        if (c != 0)
+            result = c + result;
 
-
-        j = fomer.length-1;
-        for(int i = add1.length-1; i >0; i-- ){
-            if(j == fomer.length -1)
-                dig[j+1] = "0";
-
-            if(fomer[j].equals(add1[i])){
-                fomer[j] = "0";
-                if(add1[j].equals("1") ){
-                   dig[j] = "1";
-                }
-                else{
-                    dig[j] = "0";
-                }
-            }
-            else{
-                fomer[j] = "1";
-                dig[j] = "0";
-            }
-
-            if(!fomer[j].equals(dig[j +1]))
-                fomer[j] = "1";
-            else{
-                fomer[j] = "0";
-                if(fomer[j].equals("1")){
-                    dig[j] = "1";
-                }
-            }
-
-
-
-
-            i--;
-            j--;
-        }
-
-        if(dig[j + 1] .equals("0") )
-            return toString(fomer);
-        else
-            return "1" + toString(fomer);
+        return result;
     }
 
-    public static String toString(String[] args){
-        String ss = "";
-        for(String s : args)
-            ss += s;
-        return ss;
-    }
 }
