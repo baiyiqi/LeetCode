@@ -13,6 +13,7 @@ public class solution {
 
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         if(root == null)
+            //vs
             return new ArrayList<List<Integer>>();
         else{
             Queue<TreeNode> tQueue = new ArrayDeque<TreeNode>();
