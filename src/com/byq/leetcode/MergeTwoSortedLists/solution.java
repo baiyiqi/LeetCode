@@ -4,6 +4,7 @@ package com.byq.leetcode.MergeTwoSortedLists;
  * Created by yiqibai on 12/18/14.
  */
 public class solution {
+
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if(l1 == null && l2 == null)
             return null;
