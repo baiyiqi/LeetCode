@@ -1,7 +1,9 @@
 package com.byq.Test;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 
 /**
  * Created by yiqibai on 1/23/15.
@@ -22,14 +24,18 @@ public class HanoiTower {
 
     public static void main(String[] args) {
 
-        int a = 1;
-        int b = 2;
-        String s = "1";
-        String s1 = "2";
+        TreeNode node  = new TreeNode(1);
 
+        List<TreeNode> lst = new ArrayList<TreeNode>();
 
-        System.out.println(s1 + s);
-        System.out.println(Integer.parseInt(s1 + s));
+        lst.add(new TreeNode(1));
+        Queue<String> q = new ArrayDeque<String>();
+        for(String s : q){
+            System.out.println(s);
+
+        }
+        System.out.println(lst.contains(node));
+        System.out.println(lst.contains("a"));
     }
 
     public static  boolean check(String s){
