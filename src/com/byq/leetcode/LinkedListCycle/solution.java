@@ -1,25 +1,9 @@
 package com.byq.leetcode.LinkedListCycle;
 
-import com.byq.leetcode.ReorderList.*;
-
 /**
  * Created by yiqibai on 1/22/15.
  */
 public class solution {
-    public static void main(String[] args){
-        ListNode n1 = new ListNode(1);
-        ListNode n2 = new ListNode(2);
-        ListNode n3 = new ListNode(3);
-        ListNode n4 = new ListNode(4);
-
-        n1.next = n2;
-        n2.next = n1;
-        n3.next = n4;
-        System.out.println(hasCycle(n1));
-
-
-    }
-
 
     public static boolean hasCycle(ListNode head) {
         if(head == null || head.next == null)
@@ -38,4 +22,14 @@ public class solution {
         }
         return false;
     }
+
+    public class ListNode {
+        int val;
+        ListNode next;
+        public ListNode(int x) {
+            val = x;
+            next = null;
+        }
+    }
+
 }

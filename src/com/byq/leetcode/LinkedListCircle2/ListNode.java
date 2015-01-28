@@ -1,4 +1,4 @@
-package com.byq.leetcode.LinkedListCycle;
+package com.byq.leetcode.LinkedListCircle2;
 
 /**
  * Created by yiqibai on 12/11/14.
@@ -6,7 +6,7 @@ package com.byq.leetcode.LinkedListCycle;
 public class ListNode {
     int val;
     ListNode next;
-    public ListNode(int x) {
+    ListNode(int x) {
         val = x;
         next = null;
     }
