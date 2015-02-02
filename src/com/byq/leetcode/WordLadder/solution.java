@@ -14,7 +14,6 @@ public class solution {
         lst.add("hot");
         lst.add("dot");
         lst.add("dog");
-
         int[][] a = new int[10][10];
         int[] b = new int[19];
         System.out.println(a[0][0]);
